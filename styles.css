@@ -1,0 +1,60 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: url("./images/pexels-walid-ahmad-847402.jpg");
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.options,
+.result {
+    display: flex;
+}
+
+.options {
+    gap: 50px;
+}
+
+.result {
+    background: gold;
+    border: 2px solid blueviolet;
+    padding: 8px 16px;
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+button {
+    background: rgb(5, 60, 110);
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin: 8px 0;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
