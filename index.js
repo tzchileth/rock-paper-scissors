@@ -56,22 +56,22 @@ function playRound(playerSelection, computerSelection) {
         return `It's a draw! You chose ${playerSelection} and computer chose ${computerSelection}.`;
     }
     if (playerSelection === "rock" && computerSelection === "paper") {
-        return `You lose! ${computerSelection.charAt(0).toUpperCase().concat(computerSelection.slice(1))} beats ${playerSelection.charAt(0).toUpperCase().concat(playerSelection.slice(1))}`
+        return `You lose! ${computerSelection.charAt(0).toUpperCase().concat(computerSelection.slice(1))} beats ${playerSelection.charAt(0).toUpperCase().concat(playerSelection.slice(1))}`;
     }
     if (playerSelection === "rock" && computerSelection === "scissors") {
-        return `You Win! ${playerSelection.charAt(0).toUpperCase().concat(playerSelection.slice(1))} beats ${computerSelection.charAt(0).toUpperCase().concat(computerSelection.slice(1))}`
+        return `You Win! ${playerSelection.charAt(0).toUpperCase().concat(playerSelection.slice(1))} beats ${computerSelection.charAt(0).toUpperCase().concat(computerSelection.slice(1))}`;
     }
     if (playerSelection === "paper" && computerSelection === "rock") {
-        return `You Win! ${playerSelection.charAt(0).toUpperCase().concat(playerSelection.slice(1))} beats ${computerSelection.charAt(0).toUpperCase().concat(computerSelection.slice(1))}`
+        return `You Win! ${playerSelection.charAt(0).toUpperCase().concat(playerSelection.slice(1))} beats ${computerSelection.charAt(0).toUpperCase().concat(computerSelection.slice(1))}`;
     }
     if (playerSelection === "paper" && computerSelection === "scissors") {
-        return `You lose! ${computerSelection.charAt(0).toUpperCase().concat(computerSelection.slice(1))} beats ${playerSelection.charAt(0).toUpperCase().concat(playerSelection.slice(1))}`
+        return `You lose! ${computerSelection.charAt(0).toUpperCase().concat(computerSelection.slice(1))} beats ${playerSelection.charAt(0).toUpperCase().concat(playerSelection.slice(1))}`;
     }
     if (playerSelection === "scissors" && computerSelection === "rock") {
-        return `You lose! ${computerSelection.charAt(0).toUpperCase().concat(computerSelection.slice(1))} beats ${playerSelection.charAt(0).toUpperCase().concat(playerSelection.slice(1))}`
+        return `You lose! ${computerSelection.charAt(0).toUpperCase().concat(computerSelection.slice(1))} beats ${playerSelection.charAt(0).toUpperCase().concat(playerSelection.slice(1))}`;
     }
     if (playerSelection === "scissors" && computerSelection === "paper") {
-        return `You Win! ${playerSelection.charAt(0).toUpperCase().concat(playerSelection.slice(1))} beats ${computerSelection.charAt(0).toUpperCase().concat(computerSelection.slice(1))}`
+        return `You Win! ${playerSelection.charAt(0).toUpperCase().concat(playerSelection.slice(1))} beats ${computerSelection.charAt(0).toUpperCase().concat(computerSelection.slice(1))}`;
     }
 }
 
