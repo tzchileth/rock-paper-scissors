@@ -8,7 +8,6 @@ let gameMessage = '';
 let userScore = 0;
 let computerScore = 0;
 let drawScore = 0;
-let gameCount = 1;
 
 result.style.display = "none";
 
@@ -19,20 +18,19 @@ buttons.forEach((btn) => {
 
         if (playerChoice === 'reset') {
             reset();
-        } else if (gameCount <= NUMBER_OF_GAMES) {
+        } else if (userScore < NUMBER_OF_GAMES && computerScore < NUMBER_OF_GAMES) {
             result.style.display = "block";
 
             if (gameMessage.includes("You lose")) {
                 computerScore++;
-                result.textContent = `User = ${userScore} Draws = ${drawScore} Computer = ${computerScore}\n`;
+                result.textContent = `User = ${userScore} Draws = ${drawScore} Computer = ${computerScore}`;
             } else if (gameMessage.includes("You Win!")) {
                 userScore++;
-                result.textContent = `User = ${userScore} Draws = ${drawScore} Computer = ${computerScore}\n`;
+                result.textContent = `User = ${userScore} Draws = ${drawScore} Computer = ${computerScore}`;
             } else if (gameMessage.includes("draw!")) {
                 drawScore++;
-                result.textContent = '\n' + `User = ${userScore} Draws = ${drawScore} Computer = ${computerScore}\n`;
+                result.textContent = `User = ${userScore} Draws = ${drawScore} Computer = ${computerScore}`;
             }
-            gameCount++;
         } else {
             result.innerHTML = displayWinner(userScore, computerScore, drawScore);
         }
