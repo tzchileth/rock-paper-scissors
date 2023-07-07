@@ -2,7 +2,7 @@
 /** This function plays 5 rounds of the game */
 const NUMBER_OF_GAMES = 5;
 const buttons = document.querySelectorAll('button');
-const displayResult = document.getElementById("result");
+const result = document.getElementById("result");
 
 let gameMessage = '';
 let userScore = 0;
@@ -10,7 +10,7 @@ let computerScore = 0;
 let drawScore = 0;
 let gameCount = 1;
 
-displayResult.style.display = "none";
+result.style.display = "none";
 
 buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -20,21 +20,21 @@ buttons.forEach((btn) => {
         if (playerChoice === 'reset') {
             reset();
         } else if (gameCount <= NUMBER_OF_GAMES) {
-            displayResult.style.display = "block";
+            result.style.display = "block";
 
             if (gameMessage.includes("You lose")) {
                 computerScore++;
-                displayResult.textContent = `User = ${userScore} Draws = ${drawScore} Computer = ${computerScore}\n`;
+                result.textContent = `User = ${userScore} Draws = ${drawScore} Computer = ${computerScore}\n`;
             } else if (gameMessage.includes("You Win!")) {
                 userScore++;
-                displayResult.textContent = `User = ${userScore} Draws = ${drawScore} Computer = ${computerScore}\n`;
+                result.textContent = `User = ${userScore} Draws = ${drawScore} Computer = ${computerScore}\n`;
             } else if (gameMessage.includes("draw!")) {
                 drawScore++;
-                displayResult.textContent = '\n' + `User = ${userScore} Draws = ${drawScore} Computer = ${computerScore}\n`;
+                result.textContent = '\n' + `User = ${userScore} Draws = ${drawScore} Computer = ${computerScore}\n`;
             }
             gameCount++;
         } else {
-            displayResult.innerHTML = displayWinner(userScore, computerScore, drawScore);
+            result.innerHTML = displayWinner(userScore, computerScore, drawScore);
         }
     });
 });
@@ -91,8 +91,8 @@ function displayWinner(userScore, computerScore, drawScore) {
 
 /** Function to reset game parameters */
 function reset() {
-    displayResult.textContent = "";
-    displayResult.style.display = "none";
+    result.textContent = "";
+    result.style.display = "none";
 
     userScore = 0;
     computerScore = 0;
