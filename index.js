@@ -3,9 +3,6 @@
 const NUMBER_OF_GAMES = 5;
 const buttons = document.querySelectorAll('button');
 const displayResult = document.getElementById("result");
-const paper = document.querySelector(".paper");
-const rock = document.querySelector(".rock");
-const scissors = document.querySelector(".scissors");
 
 let gameMessage = '';
 let userScore = 0;
